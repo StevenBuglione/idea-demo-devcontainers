@@ -3,7 +3,9 @@
 //	name of the dev container
 	"name": "idea-demo",
 //	Or use a Dockerfile here, more info: https://containers.dev/guide/dockerfile
-	"image":  "openjdk:11"
+	"image":  "openjdk:11",
+
+	"postCreateCommand": "cd \"$(find /root/.cache/JetBrains/RemoteDev/dist -mindepth 1 -maxdepth 1 -type d | head -n 1)\" && ./idea.sh izhangzhihao.rainbow.brackets"
 
 }
 
